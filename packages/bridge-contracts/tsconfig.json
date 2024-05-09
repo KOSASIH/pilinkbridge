@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "paths": {
+      "@chainlink/*": ["node_modules/@chainlink/*"],
+      "@openzeppelin/*": ["node_modules/@openzeppelin/*"],
+      "typechain/*": ["node_modules/typechain/*"]
+    },
+    "types": [
+      "hardhat",
+      "mocha",
+      "chai",
+      "node",
+      "@typechain/hardhat"
+    ]
+  },
+  "include": [
+    "contracts",
+    "scripts",
+    "test"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
