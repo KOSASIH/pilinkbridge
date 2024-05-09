@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "declaration": true,
+    "sourceMap": true,
+    "types": [
+      "ethers",
+      "node",
+      "web3"
+    ],
+    "paths": {
+      "utils/*": [
+        "src/utils/*"
+      ],
+      "contracts/*": [
+        "src/contracts/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
