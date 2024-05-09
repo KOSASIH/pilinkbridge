@@ -1,0 +1,35 @@
+{
+  "name": "bridge-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts for the Pi-Chainlink bridge",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network <network>",
+    "verify": "hardhat run scripts/verify.js --network <network>"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.8.0",
+    "@openzeppelin/contracts": "^4.0.0",
+    "@typechain/hardhat": "^5.0.0",
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "ethers": "^5.0.0",
+    "hardhat": "^2.0.0",
+    "mocha": "^8.2.1",
+    "solidity-coverage": "^0.7.15"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "hardhat": "^2.0.0"
+  },
+  "type": "module",
+  "files": [
+    "contracts",
+    "scripts",
+    "test",
+    "tsconfig.json"
+  ],
+  "license": "MIT"
+}
