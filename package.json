@@ -1,0 +1,54 @@
+{
+  "name": "pi-link-bridge",
+  "version": "1.0.0",
+  "description": "A simple bridge between Pi Network and Ethereum Network",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "test": "npm run lint && npm run test:unit && npm run test:integration",
+    "test:unit": "mocha --timeout 200000 dist/test/**/*.spec.js",
+    "test:integration": "hardhat test",
+    "coverage": "nyc npm run test",
+    "deploy": "hardhat deploy --network hardhat",
+    "deploy:local": "hardhat deploy --network localhost",
+    "deploy:mainnet": "hardhat deploy --network mainnet",
+    "deploy:rinkeby": "hardhat deploy --network rinkeby",
+    "deploy:ropsten": "hardhat deploy --network ropsten",
+    "deploy:kovan": "hardhat deploy --network kovan"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@ethersproject/contracts": "^5.4.2",
+    "@ethersproject/providers": "^5.4.2",
+    "dotenv": "^10.0.0",
+    "hardhat": "^2.9.9",
+    "hardhat-deploy": "^0.10.1",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.7.20",
+    "typechain": "^8.1.0",
+    "web3": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/hardhat": "^2.9.11",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "^16.11.6",
+    "@types/web3": "^1.5.2",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "mocha": "^9.1.3",
+    "nyc": "^15.1.0",
+    "typescript": "^4.4.4"
+  },
+  "nyc": {
+    "extension": [".ts"],
+    "reporter": ["lcov", "text-summary"],
+    "check-coverage": true,
+    "all": true,
+    "sourceMap": false,
+    "instrument": false,
+    "report-dir": "./coverage"
+  }
+}
