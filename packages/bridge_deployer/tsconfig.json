@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "lib": ["ethers", "hardhat/console"],
+    "types": ["hardhat", "hardhat/types/runtime", "hardhat/types/config"]
+  },
+  "include": ["scripts", "typechain"],
+  "exclude": ["node_modules"]
+}
